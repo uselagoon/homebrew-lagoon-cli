@@ -8,6 +8,6 @@ class Lagoon < Formula
   bottle :unneeded
 
   def install
-    prefix.install "lagoon"
+    bin.install "lagoon"
   end
 end
