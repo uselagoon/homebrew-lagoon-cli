@@ -3,7 +3,7 @@ class Lagoon < Formula
   homepage "https://github.com/amazeeio/lagoon-cli"
   version  "0.5.2"
   url      "https://github.com/amazeeio/lagoon-cli/releases/download/0.5.2/lagoon-cli-0.5.2-darwin-amd64.tar.gz"
-  sha256   "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  sha256   "75f8ca74069793f2bb43bd4727084dae503b534837c01cc88c8af391080e160f"
 
   bottle :unneeded
 
