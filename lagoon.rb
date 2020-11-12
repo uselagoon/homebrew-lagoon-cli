@@ -1,9 +1,9 @@
 class Lagoon < Formula
   desc     "Command line tool for interacting with a Lagoon API"
   homepage "https://github.com/amazeeio/lagoon-cli"
-  version  "0.9.3"
-  url      "https://github.com/amazeeio/lagoon-cli/releases/download/0.9.3/lagoon-cli-0.9.3-darwin-amd64.tar.gz"
-  sha256   "c0f4a061068d839c1d3eeb3757efb0da192d626419521950d0eb8c477ccfaf77"
+  version  "0.10.0"
+  url      "https://github.com/amazeeio/lagoon-cli/releases/download/0.10.0/lagoon-cli-0.10.0-darwin-amd64.tar.gz"
+  sha256   "0ef11960a4346e331b2c56c27964cb8052f373ce4d9a7387477bdb469c19a9b0"
 
   bottle :unneeded
 
