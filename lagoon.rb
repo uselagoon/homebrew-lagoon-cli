@@ -5,20 +5,20 @@
 class Lagoon < Formula
   desc "Lagoon's local development helper tool"
   homepage "https://github.com/uselagoon/lagoon-cli"
-  version "0.12.1"
+  version "0.12.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.12.1/lagoon-cli-v0.12.1-darwin-amd64.tar.gz"
-      sha256 "f8f3f0f4d8ae541ad757bb737c143b2e20af1289f1ee86259b2bf1f3e9db27c4"
+      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.12.3/lagoon-cli-v0.12.3-darwin-amd64.tar.gz"
+      sha256 "143a78bbb4e889678f9de9d222bf1929d8953a9772ff56062e404c3ce354dbef"
 
       def install
         bin.install "lagoon"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.12.1/lagoon-cli-v0.12.1-darwin-arm64.tar.gz"
-      sha256 "5137a77bc3ad496c084eee5fbf431b36c6f6b9aff7796ac093959cc01bbd1ffb"
+      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.12.3/lagoon-cli-v0.12.3-darwin-arm64.tar.gz"
+      sha256 "179e770e8850b9b0e8b5c5d3e0f8921718acada3bbca9027c439c09d71ce59ee"
 
       def install
         bin.install "lagoon"
@@ -27,17 +27,17 @@ class Lagoon < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.12.1/lagoon-cli-v0.12.1-linux-amd64.tar.gz"
-      sha256 "f5e5b7149b6e4c864cef2537e19715c073eb480ae81de9373b9341b1b5e57f0c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.12.3/lagoon-cli-v0.12.3-linux-arm64.tar.gz"
+      sha256 "fbffdd2c99f00d3660dae55cbebbc3e6c44bb2cc5835362f8bf3014c13eb2ca0"
 
       def install
         bin.install "lagoon"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.12.1/lagoon-cli-v0.12.1-linux-arm64.tar.gz"
-      sha256 "a1b0158227504d10f9287b27a5de0f3fedfefe193a5d70077fd34ee457381e07"
+    if Hardware::CPU.intel?
+      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.12.3/lagoon-cli-v0.12.3-linux-amd64.tar.gz"
+      sha256 "3e1316bcf32f7572c7bc4e63f1ad57ff37ea932726c9357aac6b541c7747b298"
 
       def install
         bin.install "lagoon"
