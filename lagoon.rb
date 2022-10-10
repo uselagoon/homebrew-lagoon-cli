@@ -5,20 +5,20 @@
 class Lagoon < Formula
   desc "Lagoon's local development helper tool"
   homepage "https://github.com/uselagoon/lagoon-cli"
-  version "0.15.1"
+  version "0.15.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.15.1/lagoon-cli-v0.15.1-darwin-arm64.tar.gz"
-      sha256 "a4f0cf7c07e6a95f096bb05fc21ab086affff358261f64aed4a57fd27feb7cae"
+    if Hardware::CPU.intel?
+      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.15.2/lagoon-cli-v0.15.2-darwin-amd64.tar.gz"
+      sha256 "86231c2296bbb329c624851213ed125ff79ac96dad67098b5eb6159df5c4116e"
 
       def install
         bin.install "lagoon"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.15.1/lagoon-cli-v0.15.1-darwin-amd64.tar.gz"
-      sha256 "8e2672f6668cd3fc4eb69739b2abf0e1c5d46dc7c3c9927f54fb476e083ac7c8"
+    if Hardware::CPU.arm?
+      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.15.2/lagoon-cli-v0.15.2-darwin-arm64.tar.gz"
+      sha256 "08073aebbc6d1bf366c0d2083e924ee97ab64ec6cc83741900370ee83d59a24f"
 
       def install
         bin.install "lagoon"
@@ -28,16 +28,16 @@ class Lagoon < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.15.1/lagoon-cli-v0.15.1-linux-arm64.tar.gz"
-      sha256 "43ead4a2fff1d2ae8133c43752578aa2ae511bac2ac7e64cdfb7bdcbec973a18"
+      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.15.2/lagoon-cli-v0.15.2-linux-arm64.tar.gz"
+      sha256 "724769d3265ce035c54135086dd5e2c0e3956b60b6d5f29c4d00f569e6040147"
 
       def install
         bin.install "lagoon"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.15.1/lagoon-cli-v0.15.1-linux-amd64.tar.gz"
-      sha256 "3da33403913b9941434052105e49f01f5029834631e6252255edb4ca6c551eaa"
+      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.15.2/lagoon-cli-v0.15.2-linux-amd64.tar.gz"
+      sha256 "a804f2b197ebdb1d7d6a26cf72dbee4f35a64ade66af5d13444e92aa6b4d58d2"
 
       def install
         bin.install "lagoon"
