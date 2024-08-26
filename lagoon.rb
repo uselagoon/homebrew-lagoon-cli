@@ -5,20 +5,20 @@
 class Lagoon < Formula
   desc "Lagoon's local development helper tool"
   homepage "https://github.com/uselagoon/lagoon-cli"
-  version "0.21.3"
+  version "0.30.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.21.3/lagoon-cli-v0.21.3-darwin-amd64.tar.gz"
-      sha256 "43053b8bdba3cdaa0fb0eb7c206c7bda1c08bdd44be13d5b41b1e3abfc09e916"
+    on_intel do
+      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.30.0/lagoon-cli-v0.30.0-darwin-amd64.tar.gz"
+      sha256 "c9ce8eb68ca0e2dd9bf89b3081f7feae7266ca30da5179a45ace486a7a63be26"
 
       def install
         bin.install "lagoon"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.21.3/lagoon-cli-v0.21.3-darwin-arm64.tar.gz"
-      sha256 "c5ec8ecb0d4f8d70d083e728fa311984bd2cd5a9e55f0791eb57e88f660bb240"
+    on_arm do
+      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.30.0/lagoon-cli-v0.30.0-darwin-arm64.tar.gz"
+      sha256 "9338a8fbd2a1591c4f0ffa494459b6d3becc1a62ed674c5c40e05b9c30df55f5"
 
       def install
         bin.install "lagoon"
@@ -27,20 +27,24 @@ class Lagoon < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.21.3/lagoon-cli-v0.21.3-linux-amd64.tar.gz"
-      sha256 "f5844ee1ef843a770e5b3760ac7a8614bec262d28c58571a098022ef73aa5938"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.30.0/lagoon-cli-v0.30.0-linux-amd64.tar.gz"
+        sha256 "a2ab10fa513e6ec3b7e94445e7a95802a90f238c3485dc6bc96e3330cf76203d"
 
-      def install
-        bin.install "lagoon"
+        def install
+          bin.install "lagoon"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.21.3/lagoon-cli-v0.21.3-linux-arm64.tar.gz"
-      sha256 "ed8505e5d8ebe52b72a3cef466ed4c3ab895807b961028b169b9b6b9064a97a1"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/uselagoon/lagoon-cli/releases/download/v0.30.0/lagoon-cli-v0.30.0-linux-arm64.tar.gz"
+        sha256 "bf600af05f3b3e91cab23232d997cc51a01db1f6cb6a7cc9ee01f63c62fae7b3"
 
-      def install
-        bin.install "lagoon"
+        def install
+          bin.install "lagoon"
+        end
       end
     end
   end
